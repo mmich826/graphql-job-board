@@ -10,9 +10,7 @@ export class JobBoard extends Component {
   };
 
   async componentDidMount() {
-    console.log('-------------> PRE');
     const jobs = await loadJobs();
-    console.log('------------->', jobs);
     this.setState({jobs});
   };
 

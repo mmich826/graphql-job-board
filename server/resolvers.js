@@ -4,10 +4,19 @@ const Query = {
     jobs: () => {
         return db.jobs.list();
     },
-    job: (root, { id }) => {
+    job: (root, {id}) => {
         return db.jobs.get(id);
+    },
+    company: (root, {id}) => {
+        return db.companies.get(id);
     }
 };
+
+const Company = {
+    jobs: (company) => {
+        return db.jobs.list().filter( (job) => job.companyId === company.id);
+    }
+}
 
 const Job = {
     company: (job) => {
@@ -15,4 +24,11 @@ const Job = {
     }
 }
 
-module.exports = { Query, Job }
+const Mutation = {
+    createJob: (root, {input}) => {
+        const id =  db.jobs.create(input);
+        return db.jobs.get(id);
+    }
+}
+
+module.exports = { Query, Mutation, Company, Job }

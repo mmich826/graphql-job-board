@@ -1,13 +1,13 @@
 export const companies = [
   {
     id: 'company1',
-    name: 'Company A',
+    name: 'Company AFD1',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     id: 'company2',
-    name: 'Company B',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    name: 'Company BFD1',
+    description: 'Lorem ipsum asdfasdfasdfasdfasdfasdf asdf asd f asdf asd fasdfasdfasdfasdf dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   }
 ];
 
